@@ -1,0 +1,1 @@
+<?php$file = 'balochxd72.json';$keyToDelete = $_GET['key'];$jsonString = file_get_contents($file);$data = json_decode($jsonString, true);unset($data[$keyToDelete]);$jsonString = json_encode($data, JSON_PRETTY_PRINT);file_put_contents($file, $jsonString);echo "The license key has been successfully deleted.";?>
